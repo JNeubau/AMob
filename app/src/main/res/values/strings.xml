@@ -7,4 +7,41 @@
     <string name="stop"> Stop timer </string>
     <string name="reset"> Reset timer </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_activity_title">Action Activity</string>
+    <string name="action_share">Share</string>
+    <string name="title_top_frag">Fragment Główny</string>
+    <string name="home_tab">Start</string>
+    <string name="kat1_tab">Kategoria 1</string>
+    <string name="kat2_tab">Kategoria 2</string>
+    <string name="top_header">Jakiś nagłówek</string>
+    <string name="top_image">Jakiś obrazek</string>
+    <string name="top_text">Jakieś kilkuzdaniowe bla bla bla.</string>
+    <string name="user_name"> Android Studio </string>
+    <string name="user_mail"> android.studio@android.com </string>
+    <string name="drawer_import">Import</string>
+    <string name="drawer_settings">Settings</string>
+    <string name="possible_activity">Possible Activity</string>
+
+    <string-array name="kategoria2">
+        <item>Pozycja 1 kat.2</item>
+        <item>Pozycja 2 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+        <item>Pozycja 3 kat.2</item>
+    </string-array>
 </resources>

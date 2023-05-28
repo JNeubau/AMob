@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppMotive" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="titleTextColor">@color/purple_200</item>
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
+</resources>
