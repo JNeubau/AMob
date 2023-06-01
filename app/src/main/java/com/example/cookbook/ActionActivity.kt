@@ -3,6 +3,8 @@ package com.example.cookbook
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
@@ -18,17 +20,13 @@ class ActionActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val actionBar: ActionBar? = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    fun onClickDone(view: View) {
-        val text: CharSequence = "To jest prosty pasek snackbar."
-        val duration = Snackbar.LENGTH_LONG
-        val snackbar = Snackbar.make(findViewById<View>(R.id.coordinator), text, duration)
-        snackbar.setAction("Cofnij") {
-            val toast = Toast.makeText(applicationContext, "Cofnięto!", Toast.LENGTH_SHORT)
-            toast.show()
+        val fm: FragmentManager = supportFragmentManager
+        var fragment: Fragment? = fm.findFragmentById(R.id.fragment_sunset)
+        if (fragment == null) {
+            fragment = SunsetFragment.newInstance()
+            fm.beginTransaction()
+                .add(R.id.fragment_sunset, fragment)
+                .commit()
         }
-        snackbar.show()
     }
-
 }

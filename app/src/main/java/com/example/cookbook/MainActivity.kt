@@ -19,20 +19,21 @@ import android.view.View
 import android.widget.Toast
 
 
-class MainActivity : AppCompatActivity(), DishListFragment.Listener {
+class MainActivity : AppCompatActivity() {
 
     private var shareActionProvider: ShareActionProvider? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Dish.getCategories()
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar_main)
         setSupportActionBar(toolbar)
         val pagerAdapter: SectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
-        val pager: ViewPager = findViewById<ViewPager>(R.id.pager)
-        pager.adapter = pagerAdapter
-        val tabLayout: TabLayout = findViewById<TabLayout>(R.id.tabs)
-        tabLayout.setupWithViewPager(pager)
+        val pager: ViewPager? = findViewById<ViewPager>(R.id.pager)
+        pager?.adapter = pagerAdapter
+        val tabLayout: TabLayout? = findViewById<TabLayout>(R.id.tabs)
+        tabLayout?.setupWithViewPager(pager)
 //        val db = DBHelper(this, null)
     }
 
@@ -42,23 +43,6 @@ class MainActivity : AppCompatActivity(), DishListFragment.Listener {
         shareActionProvider = MenuItemCompat.getActionProvider(menuItem) as ShareActionProvider
         setShareActionIntent("Blalala")
         return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun itemClicked(id: Long) {
-        val fragmentContainer = findViewById<View>(R.id.fragment_container)
-        if (fragmentContainer != null) {
-            val ft = supportFragmentManager.beginTransaction()
-            val details = CookDetailFragment()
-            details.setDish(id)
-            ft.replace(R.id.fragment_container, details)
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-            ft.addToBackStack(null)
-            ft.commit()
-        } else {
-            val intent: Intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.EXTRA_RECIPE_ID, id)
-            startActivity(intent)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

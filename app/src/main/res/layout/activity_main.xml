@@ -74,19 +74,3 @@
         android:contentDescription="@string/action_share" />
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-
-<!--<fragment-->
-<!--android:name="com.example.cookbook.DishListFragment"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:id="@+id/fragment_main" >-->
-<!--</fragment>-->
-
-<!--<include-->
-<!--layout="@layout/toolbar_main"-->
-<!--android:id="@+id/toolbar"-->
-<!--app:layout_scrollFlags="scroll|enterAlways"-->
-<!--app:layout_collapseMode="pin"-->
-<!--app:title="@string/app_name"/>-->

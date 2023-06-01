@@ -28,8 +28,9 @@ class TopFragment: Fragment() {
         dishRecycler.layoutManager = layoutManager
         adapter.setListener(object : CaptionedImagesAdapter.Listener {
             override fun onClick(position: Int) {
+                val dishTmpId: Int = Dish.dishes[position].tmpId
                 val intent = Intent(activity, CookDetailActivity::class.java)
-                intent.putExtra(CookDetailActivity.EXTRA_COOK_ID, position)
+                intent.putExtra(CookDetailActivity.EXTRA_COOK_ID, dishTmpId)
                 activity!!.startActivity(intent)
             }
         })

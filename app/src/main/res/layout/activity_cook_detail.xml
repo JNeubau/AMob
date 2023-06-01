@@ -46,6 +46,11 @@ tools:context=".MainActivity">
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textDescription"/>
+
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
@@ -61,59 +66,3 @@ tools:context=".MainActivity">
         android:contentDescription="@string/action_share" />
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-<!--<fragment-->
-<!--android:name="com.example.cookbook.TimerFragment"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:id="@+id/fragment_timer_in_activity" />-->
-
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--xmlns:tools="http://schemas.android.com/tools"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:orientation="vertical"-->
-<!--tools:context=".CookDetailActivity">-->
-
-<!--<include-->
-<!--    layout="@layout/toolbar_main"-->
-<!--    android:id="@+id/toolbar" />-->
-
-<!--<TextView-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:textAppearance="?android:attr/textAppearanceLarge"-->
-<!--    android:id="@+id/textTitle" />-->
-
-<!--<ImageView-->
-<!--    android:id="@+id/dish_image"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:adjustViewBounds="true" />-->
-
-
-<!--<fragment-->
-<!--    android:name="com.example.cookbook.CookDetailFragment"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:id="@+id/fragment_timer_in_activity" />-->
-
-
-<!--</LinearLayout>-->
-
-<!--<TextView-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/textDescription" />-->
-
-<!--<FrameLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/timer_container" />-->
-
-<!--<FrameLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/timer_container2"-->
-<!--android:visibility="gone" />-->

@@ -18,18 +18,19 @@ class Tab2Fragment: Fragment() {
     ): View {
         val dishRecycler: RecyclerView = inflater.inflate(R.layout.fragment_tab2,
             container, false) as RecyclerView
-        val names = arrayOfNulls<String>(Dish.dishes.size)
-        for (i in names.indices) { names[i] = Dish.dishes[i].name }
-        val images = arrayOfNulls<Int>(Dish.dishes.size)
-        for (i in images.indices) { images[i] = Dish.dishes[i].imageResourceId }
+        val names = arrayOfNulls<String>(Dish.sandwiches.size)
+        for (i in names.indices) { names[i] = Dish.sandwiches[i].name }
+        val images = arrayOfNulls<Int>(Dish.sandwiches.size)
+        for (i in images.indices) { images[i] = Dish.sandwiches[i].imageResourceId }
         val adapter = CaptionedImagesAdapter(names, images)
         dishRecycler.adapter = adapter
         val layoutManager = GridLayoutManager(activity, 2)
         dishRecycler.layoutManager = layoutManager
         adapter.setListener(object : CaptionedImagesAdapter.Listener {
             override fun onClick(position: Int) {
+                val dishTmpId: Int = Dish.sandwiches[position].tmpId
                 val intent = Intent(activity, CookDetailActivity::class.java)
-                intent.putExtra(CookDetailActivity.EXTRA_COOK_ID, position)
+                intent.putExtra(CookDetailActivity.EXTRA_COOK_ID, dishTmpId)
                 activity!!.startActivity(intent)
             }
         })

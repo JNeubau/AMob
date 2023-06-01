@@ -66,6 +66,9 @@ class CookDetailActivity : AppCompatActivity() {
         val imageView = findViewById<View>(R.id.dish_image) as ImageView
         imageView.setImageDrawable(ContextCompat.getDrawable(this, dishImage))
         imageView.contentDescription = dish.name
+        val dishRecipe = dish.recipe
+        val textRecipe = findViewById<View>(R.id.textDescription) as TextView
+        textRecipe.text = dishRecipe
 
         if (savedInstanceState == null) {
             val timer = TimerFragment()
