@@ -1,2 +1,2 @@
 # AMob
-A mobile app
+A mobile cookbook app
